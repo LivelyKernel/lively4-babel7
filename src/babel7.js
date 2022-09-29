@@ -7,7 +7,7 @@ import babelPluginProposalExportNamespaceFrom from '@babel/plugin-proposal-expor
 import babelPluginTransformModulesSystemJS from '@babel/plugin-transform-modules-systemjs';
 import babelPluginProposalDynamicImport from '@babel/plugin-proposal-dynamic-import';
 import babelPluginTransformReactJsx from '@babel/plugin-transform-react-jsx';
-
+import * as babelHelperModuleImports from "@babel/helper-module-imports";
 
 var exports = {
   version: "0.4",
@@ -21,11 +21,11 @@ var exports = {
   babelPluginTransformModulesSystemJS,
   babelPluginProposalDynamicImport,
   babelPluginTransformReactJsx,
+  babelHelperModuleImports
 };
 
 window.lively4babel = exports // it seems we have to write it or use it, so that the module export works... in webpack?
 
-export default exports;
-
+export default exports // Does not work #BUG? Maybe our variable rewriting breaks this...
 
 console.log("LIVELY BABEL7 LOADED")
