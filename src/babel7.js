@@ -1,27 +1,32 @@
 import * as babel from '@babel/core';
 import babelPluginTransformTypeScript from '@babel/plugin-transform-typescript';
 import babelPluginSyntaxClassProperties from '@babel/plugin-syntax-class-properties';
+import babelPluginSyntaxFunctionBind from '@babel/plugin-syntax-function-bind';
 import babelPluginNumericSeparator from '@babel/plugin-proposal-numeric-separator';
 import babelPluginProposalExportDefaultFrom from '@babel/plugin-proposal-export-default-from';
-import babelPluginProposalExportNamespaceFrom from '@babel/plugin-proposal-export-namespace-from';
+import babelPluginProposalFunctionBind from '@babel/plugin-proposal-function-bind';
 import babelPluginTransformModulesSystemJS from '@babel/plugin-transform-modules-systemjs';
+import babelPluginProposalExportNamespaceFrom from '@babel/plugin-proposal-export-namespace-from';
 import babelPluginProposalDynamicImport from '@babel/plugin-proposal-dynamic-import';
 import babelPluginTransformReactJsx from '@babel/plugin-transform-react-jsx';
 import * as babelHelperModuleImports from "@babel/helper-module-imports";
+
 
 var exports = {
   version: "0.4",
   name: "babel7",
   babel,
-  babelPluginTransformTypeScript,
+  babelHelperModuleImports,
   babelPluginSyntaxClassProperties,
-  babelPluginNumericSeparator,
+  babelPluginSyntaxFunctionBind,
   babelPluginProposalExportDefaultFrom,
   babelPluginProposalExportNamespaceFrom,
-  babelPluginTransformModulesSystemJS,
   babelPluginProposalDynamicImport,
+  babelPluginProposalFunctionBind,
+  babelPluginTransformModulesSystemJS,
   babelPluginTransformReactJsx,
-  babelHelperModuleImports
+  babelPluginTransformTypeScript,
+  babelPluginNumericSeparator,
 };
 
 window.lively4babel = exports // it seems we have to write it or use it, so that the module export works... in webpack?
