@@ -7,7 +7,9 @@ module.exports = {
   resolve: {
     aliasFields: ['browser']
   },
-
+  optimization: {
+        minimize: false
+  },
   node: {
         console: false,
     global: true,
