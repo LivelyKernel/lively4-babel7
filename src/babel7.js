@@ -5,6 +5,7 @@ import babelPluginSyntaxFunctionBind from '@babel/plugin-syntax-function-bind';
 import babelPluginNumericSeparator from '@babel/plugin-proposal-numeric-separator';
 import babelPluginProposalExportDefaultFrom from '@babel/plugin-proposal-export-default-from';
 import babelPluginProposalFunctionBind from '@babel/plugin-proposal-function-bind';
+import babelPluginProposalDoExpressions from "@babel/plugin-proposal-do-expressions";
 import babelPluginTransformModulesSystemJS from '@babel/plugin-transform-modules-systemjs';
 import babelPluginProposalExportNamespaceFrom from '@babel/plugin-proposal-export-namespace-from';
 import babelPluginProposalDynamicImport from '@babel/plugin-proposal-dynamic-import';
@@ -23,6 +24,7 @@ var exports = {
   babelPluginProposalExportNamespaceFrom,
   babelPluginProposalDynamicImport,
   babelPluginProposalFunctionBind,
+  babelPluginProposalDoExpressions,
   babelPluginTransformModulesSystemJS,
   babelPluginTransformReactJsx,
   babelPluginTransformTypeScript,
