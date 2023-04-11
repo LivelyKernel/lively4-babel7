@@ -1,14 +1,26 @@
 module.exports = {
   mode: 'production',
-  entry: './src/babel7.js',
+  entry: {
+    babel7: './src/babel7.js',
+  },
   output: {
-    filename: 'babel7.js'
+    filename: '[name].js'
   },
   resolve: {
-    aliasFields: ['browser']
+    aliasFields: ['browser'],
+    extensions: ['*', '.mjs', '.js', '.json']
   },
   optimization: {
         minimize: false
+  },
+  module: {
+    rules: [
+      {
+        test: /\.mjs$/,
+        include: /node_modules/,
+        type: 'javascript/auto'
+      }
+    ]
   },
   node: {
         console: false,
@@ -21,3 +33,5 @@ module.exports = {
     fs: 'empty'
   }
 };
+
+

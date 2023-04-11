@@ -9,6 +9,7 @@ import babelPluginProposalDoExpressions from "@babel/plugin-proposal-do-expressi
 import babelPluginTransformModulesSystemJS from '@babel/plugin-transform-modules-systemjs';
 import babelPluginProposalExportNamespaceFrom from '@babel/plugin-proposal-export-namespace-from';
 import babelPluginProposalDynamicImport from '@babel/plugin-proposal-dynamic-import';
+import babelPluginProposalOptionalChaining from '@babel/plugin-proposal-optional-chaining';
 import babelPluginTransformReactJsx from '@babel/plugin-transform-react-jsx';
 import * as babelHelperModuleImports from "@babel/helper-module-imports";
 
@@ -29,6 +30,7 @@ var exports = {
   babelPluginTransformReactJsx,
   babelPluginTransformTypeScript,
   babelPluginNumericSeparator,
+  babelPluginProposalOptionalChaining
 };
 
 window.lively4babel = exports // it seems we have to write it or use it, so that the module export works... in webpack?
