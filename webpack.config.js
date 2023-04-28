@@ -7,7 +7,10 @@ module.exports = {
     filename: '[name].js'
   },
   resolve: {
-    aliasFields: ['browser'],
+    // aliasFields: ['browser'],
+    alias: {
+      path: require.resolve("./src/path.js")
+    },
     extensions: ['*', '.mjs', '.js', '.json']
   },
   optimization: {
